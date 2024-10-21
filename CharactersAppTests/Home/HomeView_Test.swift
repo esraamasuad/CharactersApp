@@ -6,9 +6,10 @@
 //
 
 import XCTest
+@testable import CharactersApp
 
 final class HomeView_Test: XCTestCase {
-
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -17,19 +18,27 @@ final class HomeView_Test: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    /// [HomeViewModel] -> test default Value of 'isLoading'
+    func test_HomeViewModel_default_isLoading() {
+        // Given
+        let isLoading = false
+        
+        // When
+        let vm = HomeViewModel()
+        
+        // Then
+        XCTAssertEqual(isLoading, vm.isLoading)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    /// [HomeViewModel] -> test default Value of  'pullToRefresh'
+    func test_HomeViewModel_default_pullToRefresh() {
+        // Given
+        let pullToRefresh = false
+        
+        // When
+        let vm = HomeViewModel()
+        
+        // Then
+        XCTAssertEqual(pullToRefresh, vm.pullToRefresh)
     }
-
 }
