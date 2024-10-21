@@ -26,3 +26,6 @@ This Project is built by =>
 ## Challenges
 - The mixture of UIKit & SwiftUI I have tried to simplify it to get readable & reusable code.
 
+#### [Quick Demo]
+
+https://github.com/user-attachments/assets/a8678376-15d1-454d-82cd-f7d10813cb56
