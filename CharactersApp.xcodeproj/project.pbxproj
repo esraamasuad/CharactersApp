@@ -33,6 +33,9 @@
 		ED2CE01A2CC476650068359B /* CharacterRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CE0192CC476650068359B /* CharacterRepositoryImpl.swift */; };
 		ED2CE01D2CC4F5D10068359B /* ImageFisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CE01C2CC4F5D10068359B /* ImageFisher.swift */; };
 		ED2CE01F2CC5889C0068359B /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CE01E2CC5889C0068359B /* CharacterCellView.swift */; };
+		ED5CC57C2CC5BDE300FA9A07 /* HomeView_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5CC57B2CC5BDE300FA9A07 /* HomeView_Test.swift */; };
+		ED5CC57E2CC64AEF00FA9A07 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5CC57D2CC64AEF00FA9A07 /* LoadingView.swift */; };
+		ED5CC5802CC64CC000FA9A07 /* FilterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5CC57F2CC64CC000FA9A07 /* FilterCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,10 @@
 		ED2CE0192CC476650068359B /* CharacterRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryImpl.swift; sourceTree = "<group>"; };
 		ED2CE01C2CC4F5D10068359B /* ImageFisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFisher.swift; sourceTree = "<group>"; };
 		ED2CE01E2CC5889C0068359B /* CharacterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellView.swift; sourceTree = "<group>"; };
+		ED5CC5792CC5A8E200FA9A07 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ED5CC57B2CC5BDE300FA9A07 /* HomeView_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView_Test.swift; sourceTree = "<group>"; };
+		ED5CC57D2CC64AEF00FA9A07 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		ED5CC57F2CC64CC000FA9A07 /* FilterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +120,7 @@
 		ED2CDFA62CC413050068359B = {
 			isa = PBXGroup;
 			children = (
+				ED5CC5792CC5A8E200FA9A07 /* README.md */,
 				ED2CDFB12CC413050068359B /* CharactersApp */,
 				ED2CDFC82CC4130C0068359B /* CharactersAppTests */,
 				ED2CDFD22CC4130D0068359B /* CharactersAppUITests */,
@@ -149,6 +157,7 @@
 		ED2CDFC82CC4130C0068359B /* CharactersAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				ED5CC57A2CC5B33A00FA9A07 /* Home */,
 				ED2CDFC92CC4130C0068359B /* CharactersAppTests.swift */,
 			);
 			path = CharactersAppTests;
@@ -282,9 +291,19 @@
 			isa = PBXGroup;
 			children = (
 				ED2CE01C2CC4F5D10068359B /* ImageFisher.swift */,
+				ED5CC57D2CC64AEF00FA9A07 /* LoadingView.swift */,
 				ED2CE01E2CC5889C0068359B /* CharacterCellView.swift */,
+				ED5CC57F2CC64CC000FA9A07 /* FilterCellView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		ED5CC57A2CC5B33A00FA9A07 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ED5CC57B2CC5BDE300FA9A07 /* HomeView_Test.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,11 +459,13 @@
 				ED2CE0002CC462810068359B /* SessionManager.swift in Sources */,
 				ED2CE0082CC466110068359B /* ResponseError.swift in Sources */,
 				ED2CE0182CC4752C0068359B /* CharacterRepository.swift in Sources */,
+				ED5CC5802CC64CC000FA9A07 /* FilterCellView.swift in Sources */,
 				ED2CE01A2CC476650068359B /* CharacterRepositoryImpl.swift in Sources */,
 				ED2CDFFA2CC460490068359B /* AppConstants.swift in Sources */,
 				ED2CDFE92CC452AB0068359B /* HomeViewModel.swift in Sources */,
 				ED2CDFFD2CC461620068359B /* APIError.swift in Sources */,
 				ED2CDFED2CC452E50068359B /* DetailsViewModel.swift in Sources */,
+				ED5CC57E2CC64AEF00FA9A07 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED2CDFCA2CC4130C0068359B /* CharactersAppTests.swift in Sources */,
+				ED5CC57C2CC5BDE300FA9A07 /* HomeView_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

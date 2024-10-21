@@ -110,10 +110,8 @@ extension HomeView: UICollectionViewDataSource, UICollectionViewDelegate {
             if (collectionView.numberOfSections == 2 && indexPath.section == 1) {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "loadingCell", for: indexPath)
                 cell.contentConfiguration = UIHostingConfiguration {
-                    VStack {
-                        ProgressView("Loading").progressViewStyle(CircularProgressViewStyle())
-                        Spacer()
-                    }.id(UUID())
+                   LoadingView()
+                        .id(UUID())
                 }
                 return cell
             } else {
@@ -121,22 +119,7 @@ extension HomeView: UICollectionViewDataSource, UICollectionViewDelegate {
                 let item = viewModel.charactersList[indexPath.row]
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
                 cell.contentConfiguration = UIHostingConfiguration {
-                    VStack(alignment: .center) {
-                        Spacer()
-                        HStack {
-                            ImageFisher(url: (item.image ?? ""))
-                                .frame(width: 64, height: 64)
-                            
-                            VStack(alignment: .leading) {
-                                Text(item.name ?? "").bold()
-                                Text(item.species ?? "")
-                            }
-                            Spacer()
-                        }
-                        .padding(.horizontal, 10)
-                        Spacer()
-                    }
-                    .background(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(Color.gray, lineWidth: 0.5))
+                    CharacterCellView(item: item)
                 }
                 return cell
             }
@@ -145,17 +128,7 @@ extension HomeView: UICollectionViewDataSource, UICollectionViewDelegate {
             let item  = viewModel.filterList[indexPath.row].rawValue
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
             cell.contentConfiguration = UIHostingConfiguration {
-                HStack {
-                    Text(item).bold()
-                    Spacer()
-                }
-                //                .background((viewModel.status == item ) ? Color.cyan : Color.white)
-                .padding(.horizontal,15)
-                .padding(.vertical,5)
-                .background {
-                    RoundedRectangle(cornerRadius: 20, style: .continuous).fill((viewModel.status == item ) ? Color.cyan : Color.white)
-                    RoundedRectangle(cornerRadius: 20, style: .continuous).strokeBorder(Color.gray, lineWidth: 0.5)
-                }
+              FilterCellView(item: item, isSelected: (viewModel.status == item))
             }
             return cell
         }

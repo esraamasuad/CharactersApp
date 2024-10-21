@@ -27,7 +27,6 @@ class DetailsViewModel: ObservableObject {
     init(characherDetails: CharacterModel?) {
         self.characherDetails = characherDetails
         self.iD = characherDetails?.id ?? 0
-     //   getCharacterDetails()
     }
     
     func setUp() {
